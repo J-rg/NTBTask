@@ -75,7 +75,7 @@
 	{
 		NSData *data = [file availableData]; // this will read to EOF, so call only once
 		NSString *output = [[NSString alloc] initWithData:data encoding:self.encoding];
-		_outputHandler(output);
+		self->_outputHandler(output);
 	};
 }
 
@@ -89,7 +89,7 @@
 	{
 		NSData *data = [file availableData]; // this will read to EOF, so call only once
 		NSString *output = [[NSString alloc] initWithData:data encoding:self.encoding];
-		_errorHandler(output);
+		self->_errorHandler(output);
 	};
 }
 
